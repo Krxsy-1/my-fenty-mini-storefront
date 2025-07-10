@@ -7,7 +7,7 @@
   <title>Checkout Page</title>
   <style>
     body {
-      font-family: sans-serif;
+      font-family: serif;
       background-color: #f0f0f0;
       padding: 20px;
     }
@@ -42,7 +42,7 @@
     }
     button {
       margin: 10px 5px;
-      background-color: #FADADD;
+      background-color: #f1959f;
       color: white;
       padding: 10px 15px;
       border: none;
@@ -60,7 +60,7 @@
     }
     a:hover {
       text-decoration: underline;
-      color: #ffb6c1;
+      color: #f1959f;
     }
   </style>
 </head>
@@ -81,7 +81,7 @@
     <button onclick="buyNow()">Buy Now</button>
   </div>
 
-  <a href="http://127.0.0.1:3000/my fenty mini storefront/mini online store front.htm">Back to Store</a>
+  <a href="miniOnlineStore.html">Back to Store</a>
 
   <footer>
     &copy; 2025 Fenty Mini Store. All rights reserved.
@@ -96,7 +96,7 @@
       container.innerHTML = "";
 
       if (cart.length === 0) {
-        container.innerHTML = "<p>Your cart is empty 😢</p>";
+        container.innerHTML = "<p>Your cart is empty </p>";
         totalDisplay.textContent = "Total: $0";
         return;
       }
@@ -127,7 +127,12 @@
       alert("Thanks for shopping with us 💖");
       clearCart();
     }
-
+    function removeItem(index) {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      loadCart();
+    }
     window.onload = loadCart;
   </script>
 </body>
