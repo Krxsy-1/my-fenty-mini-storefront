@@ -34,6 +34,17 @@
       border-bottom: 1px solid #ddd;
       padding-bottom: 10px;
     }
+    .cart-item span {
+      flex: 1;
+      font-size: 16px;
+      margin-right: 10px;
+      word-break: break-word;
+    }
+    .cart-item price {
+      min-width: 60px;
+      text-align: right;
+      font-weight: bold;
+    }
     .total {
       font-weight: bold;
       font-size: 1.2em;
@@ -62,6 +73,18 @@
       text-decoration: underline;
       color: #f1959f;
     }
+    .remove-btn {
+      background-color: #f1959f;
+      color: #000;
+      border: none;
+      padding: 5px 10px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .remove-btn:hover {
+      background-color: #FADADD;
+    }
   </style>
 </head>
 <body>
@@ -71,7 +94,6 @@
   </header>
 
   <div class="cart-container" id="cart-items">
-    <!-- Cart items will be injected here -->
   </div>
 
   <div class="total" id="cart-total">Total: $0</div>
@@ -89,29 +111,33 @@
 
   <script>
     function loadCart() {
-      const cart = JSON.parse(localStorage.getItem("cart")) || [];
-      const container = document.getElementById("cart-items");
-      const totalDisplay = document.getElementById("cart-total");
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const container = document.getElementById("cart-items");
+    const totalDisplay = document.getElementById("cart-total");
 
-      container.innerHTML = "";
+    container.innerHTML = "";
 
-      if (cart.length === 0) {
-        container.innerHTML = "<p>Your cart is empty </p>";
-        totalDisplay.textContent = "Total: $0";
-        return;
-      }
+    if (cart.length === 0) {
+    container.innerHTML = "<p>Your cart is empty </p>";
+    totalDisplay.textContent = "Total: $0";
+    return;
+  }
 
-      let total = 0;
-      cart.forEach(item => {
-        const div = document.createElement("div");
-        div.className = "cart-item";
-        div.innerHTML = `<span>${item.name}</span><span>$${item.price}</span>`;
-        container.appendChild(div);
-        total += parseFloat(item.price);
-      });
+  let total = 0;
+  cart.forEach((item, index) => {
+    const div = document.createElement("div");
+    div.className = "cart-item";
+    div.innerHTML = `
+      <span>${item.name}</span>
+      <span class="price">$${item.price}</span>
+      <button class="remove-btn" onclick="removeItem(${index})">x</button>
+    `;
+    container.appendChild(div);
+    total += parseFloat(item.price);
+  });
 
-      totalDisplay.textContent = `Total: $${total}`;
-    }
+  totalDisplay.textContent = `Total: $${total}`;
+}
 
     function clearCart() {
       localStorage.removeItem("cart");
