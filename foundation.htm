@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="foundation" content="Foundation.">
+    <title>Foundation</title>
+    <style>
+        body {
+            font-family: sans-;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        select, button {
+            padding: 10px;
+            font-size: 1em;
+            margin-top: 20px;
+        }
+        .foundation-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .product-options {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 220px;
+        }
+        a:link {
+            color: black;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #f1959f;
+            text-decoration: underline;
+        }
+        header {
+            background-color: #FADADD;
+            padding: 20px;
+            text-align: center;
+        }
+        button {
+            background-color: #f1959f;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #FADADD;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        h1 {
+            font-size: 2em;
+            color: #333;
+        }
+        p {
+            font-size: 1.2em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://i.pinimg.com/originals/69/98/a6/6998a66508d314a18cfb0c02301dfcd1.jpg" 
+        alt="Fenty Beauty Foundation" style="width: 600%; max-width: 600px; height: auto;">
+        <h1>FOUNDATION</h1>
+        <p>Select your prefered shade:</p>
+    </header>
+    <br><br><br>
+        <div class="foundation-container">
+            <div class="product-options">
+                <br>
+                <img src="https://th.bing.com/th/id/OIP.NECPlbapqVU1vWMh_o2HLwHaGF?r=0&rs=1&pid=ImgDetMain" 
+                alt="Fenty Beauty Foundation shade 450" style="width: 100%; height: auto;">
+                <br>
+                Fenty Beauty Foundation shade 450
+                <p>$30</p>
+                <button onclick="addToCart('Fenty Beauty Foundation Shade 450', 30)">Add to Cart</button>
+            </div>
+            <br>
+            <div class="product-options">
+                <br>
+                <img src="https://www.temptalia.com/wp-content/uploads/2018/06/fenty-beauty_390_001_product.jpg" 
+                alt="Fenty Beauty foundation shade 390" style="width: 100%; height: auto;">
+                <br>
+                Fenty Beauty Foundation shade 390
+                <p>$30</p>
+                <button onclick="addToCart('Fenty Beauty Foundation Shade 390', 30)">Add to Cart</button>
+            </div>
+            <br>
+            <div class="product-options">
+                <br>
+                <img src="https://www.temptalia.com/wp-content/uploads/2018/06/fenty-beauty_360_001_product.jpg" 
+                alt="Fenty Beauty Foundation shade 360" style="width: 100%; height: auto;">
+                <br>
+                Fenty Beauty Foundation shade 360
+                <p>$30</p>
+                <button onclick="addToCart('Fenty Beauty Foundation Shade 360', 30)">Add to Cart</button>
+           </div>
+            <br>
+            <div class="product-options">
+                <img src="https://www.temptalia.com/wp-content/uploads/2018/06/fenty-beauty_410_001_product-550x550.jpg" 
+                alt="Fenty Beauty Foundation shade 410" style="width: 100%; height: auto;">
+                <br>
+                Fenty Beauty Foundation shade 410
+                <p>$30</p>
+                <button onclick="addToCart('Fenty Beauty Foundation Shade 410', 30)">Add to Cart</button>
+            </div>
+            <br>
+            <div class="product-options">
+                <img src="https://www.temptalia.com/wp-content/uploads/2018/06/fenty-beauty_440_001_product-550x550.jpg" 
+                alt="Fenty Beauty Foundation shade 440" style="width: 100%; height: auto;">
+                <br>
+                Fenty Beauty Foundation shade 440
+                <p>$30</p>
+                <button onclick="addToCart('Fenty Beauty Foundation Shade 440', 30)">Add to Cart</button>
+            </div>
+            <br>
+            <div class="product-options">
+                <img src="https://www.temptalia.com/wp-content/uploads/2018/06/fenty-beauty_430_001_product-550x550.jpg" 
+                alt="Fenty Beauty Foundation shade 430" style="width: 100%; height: auto;">
+                <br>
+                Fenty Beauty Foundation shade 430
+                <p>$30</p>
+                <button onclick="addToCart('Fenty Beauty Foundation Shade 430', 30)">Add to Cart</button>
+            </div>
+            <br>
+        </div>
+        <br>
+        <br>
+        <a href="checkout.htm">
+        <button style="background-color:#f1959f; color:black; padding:10px 20px; border:none; border-radius:5px; cursor:pointer;">
+        See Checkout
+        </button>
+        </a>
+        <a href="miniOnlineStore.html"> Back to store</a>
+</body>
+<script>
+    function addToCart(name, price, image) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push({name, price, image});
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert(name + " added to cart!");
+    }
+</script>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="checkout page" content="Checkout." />
+  <title>Checkout Page</title>
+  <style>
+    body {
+      font-family: serif;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+    header, footer {
+      background-color: #FADADD;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2em;
+      color: #333;
+    }
+    .cart-container {
+      max-width: 600px;
+      margin: auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+    }
+    .cart-item span {
+      flex: 1;
+      font-size: 16px;
+      margin-right: 10px;
+      word-break: break-word;
+    }
+    .cart-item price {
+      min-width: 60px;
+      text-align: right;
+      font-weight: bold;
+    }
+    .total {
+      font-weight: bold;
+      font-size: 1.2em;
+      text-align: right;
+      margin-top: 20px;
+    }
+    button {
+      margin: 10px 5px;
+      background-color: #f1959f;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      opacity: 0.9;
+    }
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      color: black;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+      color: #f1959f;
+    }
+    .remove-btn {
+      background-color: #f1959f;
+      color: #000;
+      border: none;
+      padding: 5px 10px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .remove-btn:hover {
+      background-color: #FADADD;
+    }
+    .cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.cart-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 8px;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Checkout</h1>
+    <p>Cart Review</p>
+  </header>
+
+  <div class="cart-container" id="cart-items">
+    <!-- Cart items will be injected here -->
+  </div>
+
+  <div class="total" id="cart-total">Total: $0</div>
+
+  <div style="text-align: center;">
+    <button onclick="clearCart()">Clear Cart</button>
+    <button onclick="buyNow()">Buy Now</button>
+  </div>
+
+  <a href="miniOnlineStore.html">Back to Store</a>
+
+  <footer>
+    &copy; 2025 Fenty Mini Store. All rights reserved.
+  </footer>
+
+  <script>
+    function displayCart() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let cartItems = document.getElementById("cart-items");
+    cartItems.innerHTML = "";
+
+    cart.forEach(item => {
+        cartItems.innerHTML += `
+            <div class="cart-item">
+                <img src="${item.image}" alt="${item.name}" class="cart-img">
+                <p>${item.name} - ₦${item.price}</p>
+            </div>
+        `;
+    });
+}
+
+    function loadCart() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const container = document.getElementById("cart-items");
+    const totalDisplay = document.getElementById("cart-total");
+
+    container.innerHTML = "";
+
+    if (cart.length === 0) {
+    container.innerHTML = "<p>Your cart is empty </p>";
+    totalDisplay.textContent = "Total: $0";
+    return;
+  }
+
+  let total = 0;
+  cart.forEach((item, index) => {
+    const div = document.createElement("div");
+    div.className = "cart-item";
+    div.innerHTML = `
+      <span>${item.name}</span>
+      <span class="price">$${item.price}</span>
+      <button class="remove-btn" onclick="removeItem(${index})">x</button>
+    `;
+    container.appendChild(div);
+    total += parseFloat(item.price);
+  });
+
+  totalDisplay.textContent = `Total: $${total}`;
+}
+
+    function clearCart() {
+      localStorage.removeItem("cart");
+      loadCart();
+      alert("Cart cleared!");
+    }
+
+    function buyNow() {
+      if (!localStorage.getItem("cart")) {
+        alert("Your cart is empty!");
+        return;
+      }
+      alert("Thanks for shopping with us 💖");
+      clearCart();
+    }
+    function removeItem(index) {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      loadCart();
+    }
+    window.onload = loadCart;
+  </script>
+</body>
+</html>

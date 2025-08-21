@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="lipstick" content="Lipstick">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: sans-;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        select, button {
+            padding: 10px;
+            font-size: 1em;
+            margin-top: 20px;
+        }
+        .lipstain-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .product-options {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 220px;
+        }
+        a:link {
+            color: black;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #f1959f;
+            text-decoration: underline;
+        }
+        header {
+            background-color: #FADADD;
+            padding: 20px;
+            text-align: center;
+        }
+        button {
+            background-color: #f1959f;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #FADADD;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        h1 {
+            font-family: serif;
+            font-size: 2em;
+            color: #333;
+        }
+        p {
+            font-family: serif;
+            font-size: 1.2em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://th.bing.com/th/id/R.6d4ffdcc87cd0a33eb385be59e59509b?rik=4rPnEUBLgztoAA&pid=ImgRaw&r=0" 
+        alt="Fenty beauty lipsticks" style="width: 600px; height: auto;">
+        <h1>LIPSTICKS</h1>
+        <p>Select your preferred shade of lipstick:</p>
+    </header>
+    <br><br><br>
+        <div class="lipstain-container">
+            <div class="product-options">
+                <img src="https://th.bing.com/th/id/R.303e480b8da0260898369565e0f27003?rik=iNiYTTsEFVg3rA&riu=http%3a%2f%2fthevault.pk%2fcdn%2fshop%2ffiles%2fFENTY_BEAUTY_-_Gloss_Bomb_Stix_High-Shine_Gloss_Stick_-_Riri_price_in_pakistan_1200x1200.jpg%3fv%3d1731152020&ehk=V4Rm%2b5jYUV4tyr3miNLknX%2fJWzyf%2bsJsvv4VZ40L7nk%3d&risl=&pid=ImgRaw&r=0" 
+                alt="Fenty Gloss Bomb stix Riri" style="width: 200px; height: auto;">
+                <br><br>
+                Fenty Beauty Gloss Bomb stix Riri
+                <p>$20</p>
+                <button onclick="addToCart('Fenty Beauty Gloss Bomb Stix Riri', 20)">Add to Cart</button>
+            </div>
+            <br>
+            <div class="product-options">
+                <img src="https://www.shopaholic.com.pk/cdn/shop/files/fenty-beauty-gloss-bomb-stix-high-shine-gloss-stick-shopaholic-01.jpg?v=1727090878" 
+                alt="Fenty Gloss Bomb Stix Shopaholic" style="width: 200px; height: auto;">
+                <br><br>
+                Fenty Beauty Gloss Bomb Stix Shopaholic
+                <p>$20</p>
+                <button onclick="addToCart('Fenty Beauty Gloss Bomb Stix Shopaholic', 20)">Add to Cart</button>
+            </div>
+            <br>
+            <div class="product-options">
+                <img src="https://www.cultbeauty.com/images?url=https://static.thcdn.com/productimg/original/15654106-5345210852794299.jpg&format=webp&auto=avif&width=985&height=985&fit=cover" 
+                alt="Fenty Gloss Bomb Stix Cult Beauty" style="width: 200px; height: auto;">
+                <br><br>
+                Fenty Beauty Gloss Bomb Stix Cult Beauty
+                <p>$20</p>
+                <button onclick="addToCart('Fenty Beauty Gloss Bomb Stix Cult Beauty', 20)">Add to Cart</button>
+            </div>
+            <br>
+            <div class="product-options">
+                <img src="https://havenlycosmetics.com/cdn/shop/files/col1.webp?v=1727861460&width=720" 
+                alt="Fenty Gloss Bomb Stix High Shine Finish" style="width: 200px; height: auto;">
+                <br><br>
+                Fenty Beauty Gloss Bomb Stix High Shine Finish
+                <p>$20</p>
+                <button onclick="addToCart('Fenty Beauty Gloss Bomb Stix High Shine Finish', 20)">Add to Cart</button>
+            </div>
+            <br>
+            <div class="product-options">
+                <img src="https://i8.amplience.net/i/manor/10003223494_01" 
+                alt="Fenty Gloss Bomb Stix MVP" style="width: 200px; height: auto;">
+                <br><br>
+                Fenty Beauty Gloss Bomb Stix MVP
+                <p>$20</p>
+                <button onclick="addToCart('Fenty Beauty Gloss Bomb Stix MVP', 20)">Add to Cart</button>
+            </div>
+            <br>
+        </div>
+        <br>
+        <br>
+        <a href="checkout.htm">
+        <button style="background-color:#f1959f; color:black; padding:10px 20px; border:none; border-radius:5px; cursor:pointer;">
+        See Checkout
+        </button>
+        </a>
+        <a href="miniOnlineStore.html">Back to store</a>
+</body>
+<script>
+    function addToCart(name, price, image) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push({name, price, image});
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert(name + " added to cart!");
+    }
+</script>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fenty Contour</title>
+    <style>
+       body {
+            font-family: sans;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        select, button {
+            padding: 10px;
+            font-size: 1em;
+            margin-top: 20px;
+        }
+        .contour-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .product-options {
+            background-color: #fff;
+            border: #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 220px;
+        }
+        a:link {
+            color: black;
+            text-decoration: underline;
+        }
+        a:hover {
+            color: #f1959f;
+            text-decoration: underline;
+        }
+        header {
+            background-color: #FADADD;
+            padding: 20px;
+            text-align: center;
+        }
+        button {
+            background-color: #f1959f;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #FADADD;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        h1 {
+            font-size: 2em;
+            color: #333;
+        }
+        p {
+            font-size: 1.2em;
+            color: #666;
+        } 
+    </style>
+</head>
+<body>
+   <header>
+    <img src="https://kosmetista.in/wp-content/uploads/2021/12/Fenty-Beauty-matchstick-2-768x960.jpg" 
+    alt="Fenty Contour and bronzers" style="width: 500px; height: auto;">
+    <h1>CONTOUR</h1>
+    <p>Select your preferrred shade:</p>
+   </header> 
+   <br><br><br>
+   <div class="contour-container">
+    <div class="product-options">
+        <br>
+        <img src="https://image-optimizer-reg.production.sephora-asia.net/images/product_images/closeup_1_Product_840026664073-Fenty-Beauty-Match-Stix-Matte-Contour_09df1bc7ee42f167b8a78836a98b0ef85227ea7f_1711104769.png" 
+        alt="Match Stix Matte Contour Skinstick Suedish" style="width: 100%; height: auto;">
+        <br>
+        Match Stix Matte Contour Skinstick Suedish
+        <p>$49</p>
+        <br>
+        <button onclick="addToCart('Match Stix Matte Contour Skinstick Suedish', 49)">Add to Cart</button>
+    </div>
+    <div class="product-options">
+        <br>
+        <img src="https://image-optimizer-reg.production.sephora-asia.net/images/product_images/closeup_1_Product_840026664066-Fenty-Beauty-Match-Stix-Matte-Contour_b936feae6bebd58c188db53eaddb804683e07d6c_1711104767.png" 
+        alt="Match Stix Matte Contour Skinstick Amber Suede" style="width: 100%; height: auto;">
+        <br>
+        Match Stix Matte Contour Skinstick Amber Suede
+        <p>$49</p>
+        <br>
+        <button onclick="addToCart('Match Stix Matte Contour Skinstick Amber Suede', 49)">Add to Cart</button>
+   </div>
+   <div class="product-options">
+        <br>
+        <img src="https://image-optimizer-reg.production.sephora-asia.net/images/product_images/closeup_1_Product_840026664035-Fenty-Beauty-Match-Stix-Matte-Contour_7f485bc837afa4c0da446268ca0c252d47bea9ed_1711104762.png" 
+        alt="Match Stix Matte Contour Skinstick Amber" style="width: 100%; height: auto;">
+        <br>
+        Match Stix Matte Contour Skinstick Ebony
+        <p>$49</p>
+        <br>
+        <button onclick="addToCart('Match Stix Matte Contour Skinstick Ebony', 49)">Add to Cart</button>
+   </div>
+   <div class="product-options">
+        <br>
+        <img src="https://image-optimizer-reg.production.sephora-asia.net/images/product_images/closeup_1_Product_840026664059-Fenty-Beauty-Match-Stix-Matte-Contour_80a95dd2eba933ed8b61790c4d9f77f0a4b25605_1711104766.png" 
+        alt="Match Stix Matte Contour Skinstick Soft Amber" style="width: 100%; height: auto;">
+        <br>
+        Match Stix Matte Contour Skinstick Soft Amber
+        <p>$49</p>
+        <br>
+        <button onclick="addToCart('Match Stix Matte Contour Skinstick Soft Amber', 49)">Add to Cart</button>
+   </div>
+ </div>
+ <br>
+ <br>
+ <br>
+ <a href="checkout.htm">
+    <button style="background-color:#f1959f; color:black; padding:10px 20px; border:none; border-radius:5px; cursor:pointer;">
+        See Checkout
+    </button>
+ </a>
+ <a herf="/.miniOnlineStore.html">Back to Store</a>
+</body>
+<script>
+    function addToCart(name, price, image) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push({name, price, image});
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert(name + " added to cart!");
+    }
+</script>
+</html>

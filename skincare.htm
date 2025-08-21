@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="skincare" content="Skincare products.">
+    <title>Fenty Skincare</title>
+    <style>
+        body {
+            font-family: sans-;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        select, button {
+            padding: 10px;
+            font-size: 1em;
+            margin-top: 20px;
+        }
+        .skincare-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .product-options {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 220px;
+        }
+        .product-options img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+        }
+        a:link {
+            color: black;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #f1959f;
+            text-decoration: underline;
+        }
+        header {
+            background-color: #FADADD;
+            padding: 20px;
+            text-align: center;
+        }
+        button {
+            background-color: #f1959f;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #FADADD;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #333;
+        }
+        p {
+            font-size: 1.2em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://cimg.clozette.co/img/fenty-skin-fragrance-free-singapore_FB.png" 
+        alt="Fenty Skincare Logo" style="width: 600%; max-width: 600px;height: auto;">
+        <h1>Fenty Skincare</h1>
+        <p>Explore our range of skincare products designed to enhance your natural beauty.</p>
+    </header>
+    <br><br><br>
+        <div class="skincare-container">
+            <div class="product-options">
+                <br>
+                <img src="https://th.bing.com/th/id/OIP.FJfOe2jmfyYcU02UGnVh6QHaHa?r=0&rs=1&pid=ImgDetMain" 
+                alt="Fenty Skin Hydrating + Strengtening Cherry lip-Oil">
+                <br>
+                Fenty Skin Hydrating + Strengtening Cherry lip-Oil
+                <p>$15</p>
+                <br>
+                <button onclick="addToCart('Fenty Skin Hydrating + Strengtening Cherry lip-Oil ', 15)">Add to Cart</button>
+            </div>
+            <br>
+            <div class="product-options">
+                <br>
+                <img src="https://i.pinimg.com/736x/6f/53/4c/6f534ce23b27b17ffc8a73017d49ff82.jpg" 
+                alt="Fenty Skin Htdrating + Strengthening Black Cherry Lip Oil">
+                <br>
+                Fenty Skin Hydrating + Strengthening Black Cherry Lip Oil
+                <p>$15</p>
+                <button onclick="addToCart('Fenty Skin Hydrating + Strengtening Black Cherry lip-Oil ', 15)">Add to Cart</button>
+            </div>
+            <br>
+            <div class="product-options">
+                <br>
+                <img src="https://th.bing.com/th/id/R.65153031b4556a1a6ad4752b81496fe8?rik=DygTEcS02cE6Zw&pid=ImgRaw&r=0" alt="Fenty Skin Total Cleans'r Remove-It-All Cleanser">
+                <br>
+                Fenty Skin Total Cleans'r Remove-It-All Cleanser
+                <p>$25</p>
+                <button onclick="addToCart('Fenty Skin Total Cleans&#39;r Remove-It-All Cleanser ', 25)">Add to Cart</button>
+            </div>
+            <br>
+            <div class="product-options">
+                <br>
+                <img src="https://image-optimizer-th.production.sephora-asia.net/images/product_images/zoom_1_Product_840026658799-Fenty-Skin-Fat-Water-Pore-Refining-Toner-Serum-Christmas-Limited-Ed_26dd5a2ce17eb1b89379ba436842c36ce5527df4_1666001455.png" alt="Fenty Skin Fat Water Pore-Refining Toner Serum">
+                <br>
+                Fenty Skin Fat Water Pore-Refining Toner Serum
+                <p>$28</p>
+                <button onclick="addToCart('Fenty Skin Fat Water Pore-Refining Toner Serum', 28)">Add to Cart</button>
+            </div>
+            <br>
+            <div class="product-options">
+                <br>
+                <img src="https://www.makeupsens.com/28869-thickbox_default/fenty-skin-hydra-vizor-moisturizer-broad-spectrum-spf-30-sunscreen.jpg" alt="Fenty Skin Hydra Vizor Moisturizer Broad spectrum SPF 30">
+                <br>
+                Fenty Skin Hydra Vizor Invisible Moisturizer
+                <p>$35</p>
+                <button onclick="addToCart('Fenty Skin Hydra Vizor Invisible Moisturizer', 35)">Add to Cart</button>
+            </div>
+            <br>
+            <div class="product-options">
+                <br>
+                <img src="https://th.bing.com/th/id/R.91b40e816d53f81e926c9cd2ea524660?rik=wcCaYkvZ%2fpj7Gg&pid=ImgRaw&r=0" alt="Fenty Skin Instant Reset Overnight Recovery Gel Cream">
+                <br>
+                Fenty Skin Instant Reset Overnight Recovery Gel Cream
+                <p>$40</p>
+                <button onclick="addToCart('Fenty Skin Instant Reset Overnight Recovery Gel Cream ', 40)">Add to Cart</button>
+            </div>
+            <br>
+            <div class="product-options">
+                <br>
+                <img src="https://i.pinimg.com/736x/66/07/b2/6607b27a752ea240b52369a7601482ff.jpg" alt="Fenty Skin Flash Nap Instant Revival Brightening Eye Gel Cream">
+                <br>
+                Fenty Skin Flash Nap Instant Revival Brightening Eye Gel Cream
+                <p>$32</p>
+                <button onclick="addToCart('Fenty Skin Flash Nap Instant Revival Brightening Eye Gel Cream', 32)">Add to Cart</button>
+            </div>
+            <br>
+            <div class="product-options">
+                <br>
+                <img src="https://cdn.shopify.com/s/files/1/0341/3458/9485/products/FS_FA20_T2PRODUCT_DOTCOM_BUNDLES_CLEANSER_TONER_SPF_1200x1500_3df98fd4-1ab4-46c5-bb3a-d696bf9d31b8.jpg?v=1623189828&width=1920"
+                alt="Fenty skin start'rs full-size bundle">
+                <br>
+                Fenty Skin Start'rs Full-size Bundle 
+                <p>$117 ($139.52 value)</p>
+                <button onclick="addToCart('Fenty Skin Start&#39;rs Full-size Bundle', 117)">Add to Cart</button>
+            </div>
+        </div>
+        <br>
+        <br>
+        <a href="checkout.htm">
+        <button style="background-color:#f1959f; color:black; padding:10px 20px; border:none; border-radius:5px; cursor:pointer;">
+        See Checkout
+        </button>
+        </a>
+        <a href="miniOnlineStore.html">Back to store</a>
+</body>
+<script>
+    function addToCart(name, price, image) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push({name, price, image});
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert(name + " added to cart!");
+    }
+</script>
+</html>

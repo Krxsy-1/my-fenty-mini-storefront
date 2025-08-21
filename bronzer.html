@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fenty Bronzer</title>
+    <style>
+        body {
+            font-family: sans;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        select, button {
+            padding: 10px;
+            font-size: 1em;
+            margin-top: 20px;
+        }
+        .bronzer-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .product-options {
+            background-color: #fff;
+            border: #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 220px;
+        }
+        a:link {
+            color: black;
+            text-decoration: underline;
+        }
+        a:hover {
+            color: #fadadd;
+            text-decoration: underline;
+        }
+        header {
+            background-color: #FADADD;
+            padding: 20px;
+            text-align: center;
+        }
+        button {
+            background-color: #f1959f;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #FADADD;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        h1 {
+            font-size: 2em;
+            color: #333;
+        }
+        p {
+            font-size: 1.2em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://i.pinimg.com/736x/8d/4e/d6/8d4ed6080d1bbfebb38813946ad6402f.jpg" 
+        alt="Fenty Beauty Contour" style="width: 500px; height: auto;">
+        <h1>BRONZER</h1>
+        <p>Select your preffered shade: </p>
+    </header>
+    <br><br><br>
+    <div class="bronzer-container">
+        <div class="product-options">
+            <br>
+            <img src="https://image-optimizer-reg.production.sephora-asia.net/images/product_images/closeup_1_Product_840026643252-Fenty-Beauty-Cheeks-Out-Freestyle-Cre_b84910ab4abbbb01ac76809f6d3aa96fe0bcfda0_1740398157.png" alt="Cheeks Out Freestyle Cream Bronzer-Macchiato" 
+            style="width: 100%; height: auto;">
+            <br>
+            Cheeks Out Freestyle Cream Bronzer-Macchiato
+            <p>$54</p>
+            <br>
+            <button onclick="addToCart('Cheeks Out Freestyle Cream Bronzer-Macchiato', 54, 'https://image-optimizer-reg.production.sephora-asia.net/images/product_images/closeup_1_Product_840026643252-Fenty-Beauty-Cheeks-Out-Freestyle-Cre_b84910ab4abbbb01ac76809f6d3aa96fe0bcfda0_1740398157.png')">Add to Cart</button>
+        </div>
+        <br>
+        <div class="product-options">
+            <br>
+            <img src="https://image-optimizer-reg.production.sephora-asia.net/images/product_images/closeup_1_Product_840026643283-Fenty-Beauty-Cheeks-Out-Freestyle-Cre_631dfc771d1976ae861f57f2ffe7f63883f44776_1740398063.png" 
+            alt="Cheeks Out Freestyle Cream Bronzer-Chocolate" style="width: 100%; height: auto;">
+            <br>
+            Cheeks Out Freestyle Cream Bronzer-Chocolate
+            <p>$54</p>
+            <br>
+            <button onclick="addToCart('Cheeks Out Freestyle Cream Bronzer-Macchiato', 54)">Add to Cart</button>
+        </div>
+        <br>
+        <div class="product-options">
+            <br>
+            <img src="https://image-optimizer-reg.production.sephora-asia.net/images/product_images/-Fenty-Beauty-Cheeks-Out-Freestyle-Cre_008b1ab5ea8475cb31487bdcc6b9c1e112e61666_1740398180.png" 
+            alt="Cheeks Out Freestyle Cream Bronzer-Butta Biscuit" style="width: 100%; height: auto;">
+            <br>
+            Cheeks Out Freestyle Cream Bronzer-Butta Biscuit
+            <p>$54</p>
+            <br>
+            <button onclick="addToCart('Cheeks Out Freestyle Cream Bronzer-Butta Biscuit', 54)">Add to Cart</button>
+        </div>
+        <br>
+        <div class="product-options">
+            <br>
+            <img src="https://image-optimizer-reg.production.sephora-asia.net/images/product_images/closeup_1_Product_840026643238-Fenty-Beauty-Cheeks-Out-Freestyle-Cre_c9425963a1cfaf06db771adb208134c799ccc2dc_1740398210.png" 
+            alt="Cheeks Out Freestyle Cream Bronzer-Amber" style="width: 100%; height: auto;">
+            <br>
+            Cheeks Out Freestyle Cream Bronzer-Amber
+            <p>$54</p>
+            <br>
+            <button onclick="addToCart('Cheeks Out Freestyle Cream Bronzer-Amber', 54)">Add to Cart</button>
+        </div>
+        <br>
+        <div class="product-options">
+            <br>
+            <img src="https://image-optimizer-reg.production.sephora-asia.net/images/product_images/closeup_1_Product_840026643276-Fenty-Beauty-Cheeks-Out-Freestyle-Cre_18bdea197566a6f5d29183a19529b698d16f9331_1740398092.png" 
+            alt="Cheeks Out Freestyle Cream Bronzer-Teddy" style="width: 100%; height: auto;">
+            <br>
+            Cheeks Out Freestyle Cream Bronzer-Teddy
+            <p>$54</p>
+            <br>
+            <button onclick="addToCart('Cheeks Out Freestyle Cream Bronzer-Teddy', 54)">Add to Cart</button>
+        </div>
+        <br>
+        <div class="product-options">
+            <br>
+            <img src="https://image-optimizer-reg.production.sephora-asia.net/images/product_images/closeup_1_Product_840026643269-Fenty-Beauty-Cheeks-Out-Freestyle-Cre_7d23546152ebff8e27914d2e3202cef18f0b1ece_1740398122.png" 
+            alt="Cheeks Out Freestyle Cream Bronzer-Hunnie Glaze" style="width: 100%; height: auto;">
+            <br>
+            Cheeks Out Freestyle Cream Bronzer-Hunnie Glaze
+            <p>$54</p>
+            <br>
+            <button onclick="addToCart('Cheeks Out Freestyle Cream Bronzer-Hunnie Glaze', 54)">Add to Cart</button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <a href="checkout.htm">
+        <button style="background-color:#f1959f; color:black; padding:10px 20px; border:none; border-radius:5px; cursor:pointer;">
+            See Checkout
+        </button>
+    </a>
+    <a href="miniOnlineStore.html">Back to store</a>
+</body>
+<script>
+    function addToCart(name, price, image) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push({name, price, image});
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert(name + " added to cart!");
+    }
+</script>
+</html>

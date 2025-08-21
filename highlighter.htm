@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Highlighter.">
+    <meta name="keywords" content="HTML, CSS, highlighter, example">    
+    <title>Fenty Highlighters</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        select, button {
+            padding: 10px;
+            font-size: 1em;
+            margin-top: 20px;
+        }
+        .highlighter-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .product-options {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 220px;
+        }
+        a:link {
+            color: black;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #f1959f;
+            text-decoration: underline;
+        }
+        header {
+            background-color: #FADADD;
+            padding: 20px;
+            text-align: center;
+        }
+        button {
+            background-color: #f1959f;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        h1 {
+            font-family: serif;
+            font-size: 2em;
+            color: #333;
+        }
+        p {
+            font-family: serif;
+            font-size: 1.2em;
+            color: #666;
+        }
+        footer {
+            background-color: #FADADD;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://th.bing.com/th/id/OIP.VpySIPGoInwo9CXjly6oUQHaKq?r=0&w=750&h=1080&rs=1&pid=ImgDetMain" 
+        alt="Fenty Highlighter" style="width: 600%; max-width: 600px; height: auto;">
+        <h1>HIGHLIGHTER</h1>
+        <p>Select your prefered highlighter shade:</p>
+    </header>
+    <br><br><br>
+        <div class="highlighter-container">
+            <div class="product-options">
+                <br>
+                <img src="https://media1.popsugar-assets.com/files/thumbor/kP-1xpUeHfperC5oQhXw37Ymal4=/fit-in/1020x862/top/filters:format_auto():upscale()/2020/02/07/062/n/46860566/d234847833a01445_fentydiamondbombveil.png" 
+                alt="Fenty Beauty Diamond Bomb All Over Veil Highlighter" style="width: 200px; height: auto;">
+                <br>
+                Fenty Beauty Diamond Bomb All Over Veil Highlighter
+                <p>$25</p>
+                <button onclick="addToCart('Fenty Beauty Diamond Bomb All Over Veil Highlighter', 25)">Add to Cart</button>
+            </div>
+            <br>
+            <div class="product-options">
+                <img src="https://th.bing.com/th/id/OIP.iVw0GPIhewylti87ye6WyQHaHa?r=0&rs=1&pid=ImgDetMain" 
+                alt="Fenty Beauty Viole Effet Diamante" style="width: 200px; height: auto;">
+                <br>
+                Fenty Beauty Viole Effet Diamante
+                <p>$25</p>
+                <button onclick="addToCart('Fenty Beauty Foundation Viole Effet Diamante', 30)">Add to Cart</button>
+            </div>
+            <br>
+            <div class="product-options">
+                <img src="https://th.bing.com/th/id/OIP.fLOiFwA01zlsRdKHFlwddAHaHa?r=0&w=1500&h=1500&rs=1&pid=ImgDetMain" 
+                alt="Fenty Beauty Rose Diamond Highlighter" style="width: 200px; height: auto;">
+                <br>
+                Fenty Beauty Rose Diamond
+                <p>$25</p>
+                <button onclick="addToCart('Fenty Beauty Fenty Beauty Rose Diamond', 30)">Add to Cart</button>
+            </div>
+            <br>
+            <div class="product-options">
+                <img src="https://image-optimizer-reg.production.sephora-asia.net/images/product_images/closeup_26162_Fenty_KillawattFreestyleHighlighterDuoLightningDustFireCrystal_WEB_3a374e47c4cfb40802f18157fd4806dcdb710c11_1523778031.png"
+                alt="Killawatt Freestyle Highlighter Duo" style="width: 200px; height: auto;">
+                <br>
+                Fenty Beauty Killawatt Freestyle Highlighter Duo, Shade: Lightning Dust/Fire Crystal
+                <p>$63</p>
+                <button onclick="addToCart('Fenty Beauty Killawatt Freestyle Highlighter Duo, Shade: Lightning Dust/Fire Crystal', 30)">Add to Cart</button>
+            </div>
+            <br>
+            <div class="product-options">
+                <img src="https://image-optimizer-reg.production.sephora-asia.net/images/product_images/closeup_26164_Fenty_KillawattFreestyleHighlighterDuoGingerBingeMoscowMule_WEB_771551ec145908639cd856553dbaced0cd8e4055_1523778032.png"
+                alt="Killawatt Freestyle Highlighter Duo" style="width: 200px; height: auto;">
+                <br>
+                Fenty Beauty Killawatt Freestyle Highlighter Duo, Shade: Ginger Binge/Moscow Mule
+                <p>$63</p>
+                <button onclick="addToCart('Fenty Beauty Killawatt Freestyle Highlighter Duo, Shade: Ginger Binge/Moscow Mule', 30)">Add to Cart</button>
+            </div>
+            <br>
+            <div class="product-options">
+                <img src="https://image-optimizer-reg.production.sephora-asia.net/images/product_images/closeup_26165_Fenty_KillawattFreestyleHighlighterDuoMeanMoneyHustlaBaby_WEB_289f5a07b2345691b8fa8c0128a860265b48ea05_1523778032.png"
+                alt="Killawatt Freestyle Highlighter Duo" style="width: 200px; height: auto;">
+                <br>
+                Fenty Beauty Killawatt Freestyle Highlighter Duo, Shade: Mean Money/Hu$tla Baby
+                <p>$63</p>
+                <button onclick="addToCart('Fenty Beauty Killawatt Freestyle Highlighter Duo, Shade: Mean Money/Hu$tla Baby', 30)">Add to Cart</button>
+            </div>
+        </div>
+        <br>
+        <br>
+        <a href="checkout.htm">
+        <button style="background-color:#f1959f; color:black; padding:10px 20px; border:none; border-radius:5px; cursor:pointer;">
+        See Checkout
+        </button>
+        </a>
+        <a href="miniOnlineStore.html"> Back to store</a>
+</body> 
+<script>
+    function addToCart(name, price, image) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push({name, price, image});
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert(name + " added to cart!");
+    }
+</script>
+</html>

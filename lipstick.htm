@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="lipgloss" content="Lipgloss.">
+    <title>Fenty Lipglosses</title>
+    <style>
+        body {
+            font-family: serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        select, button {
+            padding: 10px;
+            font-size: 1em;
+            margin-top: 20px;
+        }
+        .gloss-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .product-options {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 220px;
+        }
+        a:link {
+            color: black;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #f1959f;
+            text-decoration: underline;
+        }
+        header {
+            background-color: #FADADD;
+            padding: 20px;
+            text-align: center;
+        }
+        button {
+            background-color: #f1959f;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        h1 {
+            font-family: serif;
+            font-size: 2em;
+            color: #333;
+        }
+        p {
+            font-family: serif;
+            font-size: 1.2em;
+            color: #666;
+        }
+        footer {
+            background-color: #FADADD;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://th.bing.com/th/id/R.420c6b8633ff74705786f9e91a6f8f13?rik=Ja2u2jwQmqdRsA&pid=ImgRaw&r=0" 
+        alt="Fenty beauty glosses" style="width: 600px; height: auto;">
+        <h1>LIPGLOSSES</h1>
+        <p>Select your preferred shade of lipgloss:</p>
+    </header> 
+    <br><br><br>
+    <div class="gloss-container"> 
+        <div class="product-options">
+            <img src="https://image-optimizer-reg.production.sephora-asia.net/images/product_images/closeup_1_Product_840026657983-Fenty-Beauty-Gloss-Bomb-Heat-Lip-Lumi_96305668ab7f8d35d216a1fc7ec6257532af7362_1748865900.png" 
+            alt="Fenty Beauty Luminizer + Plumper Lavender" style="width: 200px; height: auto;">
+            <br>
+            Fenty Beauty Luminizer + Plumper Lavender
+            <p>$42</p>
+            <button type="button" onclick="addToCart('Fenty Beauty Luminizer + Plumper Lavender', 42)">Add to Cart</button>
+        </div>
+        <br>
+        <div class="product-options">
+            <img src="https://image-optimizer-reg.production.sephora-asia.net/images/product_images/closeup_1_Product_840026654630-Fenty-Beauty-Gloss-Bomb-Heat-Lip-Luminzer--Plumper-01-Hot-Cherry_3e16a9abe94c79338fae02bd554876721a1e9558_1621630615.png" 
+            alt="Fenty Beauty Luminizer + Plumper 01 Hot Cherry" style="width: 200px; height: auto;">   
+            <br>
+            Fenty Beauty Luminizer + Plumper Hot Cherry
+            <p>$42</p>
+            <br>
+            <button type="button" onclick="addToCart('Fenty Beauty Luminizer + Plumper Hot Cherry', 42)">Add to Cart</button>
+        </div>
+        <br>
+        <div class="product-options">
+            <img src="https://image-optimizer-reg.production.sephora-asia.net/images/product_images/closeup_1_Product_840026657662-Fenty-Beauty-Gloss-Bomb-Heat-Universal-Lip-Luminizer-Plumper-02-FuY_1cd7dc8a6051632e428647c0403b5fd24ef481b1_1630043926.png" 
+            alt="Fenty Beauty Luminizer + Plumper Fu$$t Heat" style="width: 200px; height: auto;">
+            <br>
+            Fenty Beauty Luminizer + Plumper Fu$$y Heat
+            <p>$42</p>
+           <button type="button" onclick="addToCart('Fenty Beauty Luminizer + Plumper Fu$$y Heat', 42)">Add to Cart</button>
+        </div>
+        <br>
+        <div class="product-options">
+            <img src="https://image-optimizer-reg.production.sephora-asia.net/images/product_images/closeup_1_Product_840026657655-Fenty-Beauty-Gloss-Bomb-Heat-Universal-Lip-Luminizer-Plumper-03-Fen_100c5b8be58a99667fc5fc47adaee33c5a7d0be2_1630043928.png" 
+            alt="Fenty Beauty Gloss Bomb Ice" style="width: 200px; height: auto;">
+            <br>
+            Fenty Beauty Luminizer + Plumper Glow Heat
+            <p>$42</p>
+            <button type="button" onclick="addToCart('Fenty Beauty Luminizer + Plumper Glow Heat', 42)">Add to Cart</button>
+        </div>
+        <br>
+        <div class="product-options">
+            <img src="https://image-optimizer-reg.production.sephora-asia.net/images/product_images/closeup_1_Product_840026662369-Fenty-Beauty-Gloss-Bomb-Universal-Lip-Luminizer-Fuchsia-Flex_8d88114a5ca8494b0f21b2caf1da196c335bc842_1704776411.png" 
+            alt="Fenty Beauty Gloss Bomb Universal Lip Luminizer in Fuchsia Flex shade with a metallic 
+            pink gloss inside a clear rectangular tube and a shiny rose gold cap. The product is standing 
+            upright against a plain white background. The text Fenty Beauty is printed vertically on the tube. 
+            The overall tone is vibrant and luxurious." 
+            style="width: 200px; height: auto;">
+            <br>
+            Fenty Beauty Gloss Fuchia Flex
+            <p>$42</p>
+            <button type="button" onclick="addToCart('Fenty Beauty Gloss Fuchia Flex', 42)">Add to Cart</button>
+       </div>
+       <br>
+       <div class="product-options">
+            <img src="https://image-optimizer-reg.production.sephora-asia.net/images/product_images/closeup_1_Product_840026657679-Fenty-Beauty-Gloss-Bomb-Heat-Universal-Lip-Luminizer-Plumper-04-Hot_ea788a9b8dadfb84387184f4f11f7a9eae083a1d_1630043924.png" 
+            alt="Fenty Beauty Luminizer + Plumper Hot Chocolit Heat" 
+            style="width: 200px; height: auto;">
+            <br>
+            Fenty Beauty Luminizer + Plumper Hot Chocolit Heat
+            <p>$42</p>
+            <button type="button" onclick="addToCart('Fenty Beauty Luminizer + Plumper Hot Chocolit Heat', 42)">Add to Cart</button>
+       </div>
+       <br>
+       <div class="product-options">
+            <img src="https://image-optimizer-reg.production.sephora-asia.net/images/product_images/closeup_1_Product_840026657532-Fenty-Beauty-Gloss-Bomb-Heat-Lip-Luminizer-Plumper-05-Lemon-Lava_3b65d93f83ca1a7e8fd71b34b749b7ba432ff4dd_1640851604.png" 
+            alt="Fenty Beauty Luminizer + Plumper Lemon Lava" style="width: 200px; height: auto;">
+            <br>
+            Fenty Beauty Luminizer + Plumper Lemon Lava
+            <p>$42</p>
+            <button type="button" onclick="addToCart('Fenty Beauty Luminizer + Plumper Lemon Lava', 42)">Add to Cart</button>
+       </div>
+       <br>
+       <div class="product-options">
+            <img src="https://image-optimizer-reg.production.sephora-asia.net/images/product_images/closeup_1_Product_840026662536-Fenty-Beauty-Gloss-Bomb-Heat-Lip-Lumi_b48ff79ec664edff824e34224e5cd97341fc0fd7_1724057161.png" 
+            alt="Fenty Beauty Luminizer + Plumper Glass Slipper" style="width: 200px; height: auto;">
+            <br>
+            Fenty Beauty Luminizer + Plumper Glass Slipper
+            <p>$42</p>
+            <button type="button" onclick="addToCart('Fenty Beauty Luminizer + Plumper Glass Slipper', 42)">Add to Cart</button>
+       </div>
+       <br>
+       <div class="product-options">
+            <img src="https://image-optimizer-reg.production.sephora-asia.net/images/product_images/closeup_1_Product_840026669528-Fenty-Beauty-Gloss-Bomb-Universal-Lip-Luminizer-Riri_c2dc580dbe08bd4ba12e44a6826d1cdb9db9e02f_1685938997.png" 
+            alt="Gloss Bomb Universal Lip Plumper Riri" style="width: 200px; height: auto;">
+            <br>
+            Gloss Bomb Universal Lip Plumper Riri
+            <p>$38</p>
+            <button type="button" onclick="addToCart('Gloss Bomb Universal Lip Plumper Riri', 38)">Add to Cart</button>
+       </div>
+       <br>
+       <div class="product-options">
+            <img src="https://image-optimizer-reg.production.sephora-asia.net/images/product_images/closeup_1_Product_840026666879-Fenty-Beauty-Gloss-Bomb-Universal-Lip_bfaae6aaa0f258b88ada73e6da3d7f48cb1631fc_1724056735.png" 
+            alt="Gloss Bomb Universal Lip Plumper Champ Stamp Fantasy" style="width: 200px; height: auto;">
+            <br>
+            Gloss Bomb Universal Lip Plumper Champ Stamp Fantasy
+            <p>$38</p>
+            <button type="button" onclick="addToCart('Gloss Bomb Universal Lip Plumper Champ Stamp Fantasy', 38)">Add to Cart</button>
+       </div>
+       <br>
+       <div class="product-options">
+            <img src="https://image-optimizer-reg.production.sephora-asia.net/images/product_images/closeup_1_Product_840026642842-Fenty-Gloss-Bomb-Universal-Lip-Luminizer-Sweet-Mouth_1d434f0572914db7f27cd4a2fc5f5fb41f5af1b5_1578385734.png" 
+            alt="Gloss Bomb Universal Lip Plumper Sweet Mouth" style="width: 200px; height: auto;">
+            <br>
+            Gloss Bomb Universal Lip Plumper Sweet Mouth
+            <p>$38</p>
+            <button type="button" onclick="addToCart('Gloss Bomb Universal Lip Plumper Sweet Mouth', 38)">Add to Cart</button>
+       </div>
+    </div>
+    <br>
+    <br>
+    <a href="checkout.htm">
+    <button style="background-color:#f1959f; color:black; padding:10px 20px; border:none; border-radius:5px; cursor:pointer;">
+    See Checkout
+    </button>
+    </a>
+    <a href="miniOnlineStore.html">Go back to store</a>
+</body>
+<script>
+    function addToCart(name, price, image) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push({name, price, image});
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert(name + " added to cart!");
+    }
+</script>
+</html>

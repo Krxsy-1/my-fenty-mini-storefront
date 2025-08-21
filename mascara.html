@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fenty Mascara</title>
+    <style>
+        body {
+            font-family: sans;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        select, button {
+            padding: 10px;
+            font-size: 1em;
+            margin-top: 20px;
+        }
+        .mascara-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .product-options {
+            background-color: #fff;
+            border: #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 220px;
+        }
+        a:link {
+            color: black;
+            text-decoration: underline;
+        }
+        a:hover {
+            color: #fadadd;
+            text-decoration: underline;
+        }
+        header {
+            background-color: #FADADD;
+            padding: 20px;
+            text-align: center;
+        }
+        button {
+            background-color: #f1959f;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #FADADD;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        h1 {
+            font-size: 2em;
+            color: #333;
+        }
+        p {
+            font-size: 1.2em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://dennissebeauty.com/wp-content/uploads/2022/05/fenty-beauty-mascara-review-feature.jpg" 
+        alt="Fenty Beauty Mascara" style="width: 600px; height: auto;">
+        <h1>MASCARA</h1>
+        <P>Select your preffered mascara:</P>
+    </header>
+    <br><br><br>
+    <div class="mascara-container">
+        <div class="product-options">
+            <br>
+            <img src="https://image-optimizer-reg.production.sephora-asia.net/eyJlZGl0cyI6eyJyZXNpemUiOnt9fX0=/images/product_images/default_1_Product_840026676021-Fenty-Beauty-Hella-Thicc-Volumizing-M_4672fecfed2e72cab3213d6d0834fbd19012d7e0_1744356241.png" 
+            alt="Hella thicc volumizing mascara" style="width: 100%; height: auto;">
+            <br>
+            Fenty Beauty Hella Thicc Volumizing mascara
+            <p>$37</p>
+            <br>
+            <button onclick="addToCart('Fenty Beauty Hella Thicc Volumizing Mascara', 37)">Add to Cart</button>
+        </div>
+        <br>
+        <div class="product-options">
+            <br>
+            <img src="https://image-optimizer-reg.production.sephora-asia.net/eyJlZGl0cyI6eyJyZXNpemUiOnt9fX0=/images/product_images/default_1_Product_840026670128-Fenty-Beauty-Hella-Thicc-Volumizing-M_7b5ccec9d44f64d3581bee321b95419edf765b10_1717416463.png" 
+            alt="Hella Thicc volumizing Mascara Mini" style="width: 100%; height: auto;">
+            <br>
+            Fenty Beauty Hella Thicc Volumizing Mascara Mini
+            <p>$20</p>
+            <br>
+            <button onclick="addToCart('Fenty Beauty Hella Thicc Volumizing Mascara Mini', 20)">Add to Cart</button>
+        </div>
+        <br>
+        <div class="product-options">
+            <br>
+            <img src="https://tse1.mm.bing.net/th/id/OIP.pSc70Me8Cbn7uySrKB_QrAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" 
+            alt="FENTY BEAUTY Full Frontal Mascara Volume, Amplitude Et Courbe" 
+            style="width: 100%; height: auto;">
+            <br>
+            Fenty Beauty Full Frontal Mascara Volume, Amplitude Et Courbe
+            <p>$20</p>
+            <button onclick="addToCart('FENTY BEAUTY Full Frontal Mascara Volume, Amplitude Et Courbe', 20)">Add to Cart</button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <a href="checkout.htm">
+    <button style="background-color:#f1959f; color:black; padding:10px 20px; border:none; border-radius:5px; cursor:pointer;">
+        See Checkout
+    </button>    
+    </a>
+    <a href="miniOnlineStore.html">Back to store</a>
+</body>
+<script>
+    function addToCart(name, price, image) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push({name, price, image});
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert(name + " added to cart!");
+    }
+</script>
+</html>
