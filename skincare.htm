@@ -69,6 +69,17 @@
             font-size: 1.2em;
             color: #666;
         }
+        img {
+            max-width: 100%;  /* makes image shrink with screen */
+            height: auto;     /* keeps proportions */
+            display: block;
+            margin: 0 auto;   /* centers it */
+        }
+        @media (max-width: 600px) {
+            img {
+                max-width: 90%;   /* shrink further on phones */
+            }
+        }
     </style>
 </head>
 <body>
