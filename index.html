@@ -106,6 +106,34 @@
             max-width: 1200px;
             margin: auto;
         }
+        .email-link {
+            color:#f1959f;
+            font-weight: bold;
+            text-decoration: none;
+            position: relative;
+            display: inline-block;
+            transition: 0.5s ease-in-out;
+        }
+        .email-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 100%;
+            height: 2px;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.5s ease-in-out;
+        }
+        .email-link:hover {
+            transform: translateY(-3px);
+            color: #d94f5f;
+            text-shadow: 0 0 10px rgba(0, 119, 204, 0.5);
+        }
+        .email-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
         article img {
           width: 100%;  
           max-width: 200px;
@@ -163,13 +191,11 @@
             position: fixed;
             z-index: 1000;
             top: 0;
-            left: 0;
-            right: -100%;
-            background-color: #FADADD;
+            left: -250px;
+            background-color: #f1959f;
             overflow-x: hidden;
-            transition: 0.3s;
             padding-top: 60px;
-            transition: right 0.3s ease;
+            transition: left 0.5s ease;
         }
         .sidebar a {
             padding: 12px 20px;
@@ -179,7 +205,7 @@
             font-size: 18px;
         }
         .sidebar.open {
-            right: 0;
+            left: 0;
         }
         .sidebar a:hover {
             background-color: #f1b9c1;
@@ -420,7 +446,7 @@
     <a href="mascara.html">Mascara</a>
     <a href="contour.html">Contour</a>
     <a href="bronzer.html">Bronzer</a>
-    <a href="lipstain.htm">LipSticks</a>
+    <a href="lipstain.htm">Lip Sticks</a>
       </div>
     </div>
 <iframe class="iframe" width="560" height="315" src="https://www.youtube.com/embed/kFPRBzk-m8A?si=H_WPE2hqirblKPp9&amp;controls=0" 
@@ -562,17 +588,19 @@ picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
     </footer>
     <section id="Contact">
         <h2>Contact us</h2>
-        <a href="mailto:adaoraosheku@gmail.com">adaoraosheku@gmail.com</a>
+        <a href="mailto:adaoraosheku@gmail.com" class="email-link">
+            adaoraosheku@gmail.com
+        </a>
 
     </section>
     
     <script>
     function openSidebar() {
-        document.getElementById("sidebar").classList.add("open");
+        document.querySelector(".sidebar").classList.add("open");
     }
 
     function closeSidebar() {
-        document.getElementById("sidebar").classList.remove("open");
+        document.querySelector(".sidebar").classList.remove("open");
     }
     </script>
 </body>
