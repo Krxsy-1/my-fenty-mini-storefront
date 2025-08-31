@@ -71,6 +71,24 @@
             display: block;
             margin: 0 auto;   /* centers it */
         }
+        .popup {
+            position: fixed;
+            top: 20px;
+            right: -300px; /* start hidden */
+            background: #f1959f;
+            color: #fff;
+            padding: 15px 20px;
+            border-radius: 10px;
+            font-size: 1em;
+            font-weight: bold;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+            transition: all 0.5s ease;
+            z-index: 1000;
+        }
+
+        .popup.show {
+            right: 20px; /* slide in */
+        }
         @media (max-width: 600px) {
             img {
                 max-width: 90%;   /* shrink further on phones */
@@ -141,6 +159,8 @@
         </button>
         </a>
         <a href="miniOnlineStore.html">Back to store</a>
+
+        <div id="popup" class="popup">Added to cart!</div>
 </body>
 <script>
     function addToCart(name, price, image) {
@@ -148,6 +168,15 @@
         cart.push({name, price, image});
         localStorage.setItem("cart", JSON.stringify(cart));
         alert(name + " added to cart!");
+
+        const popup = document.getElementById("popup");
+        popup.innerText = `${name} added to cart 🛒`;
+        popup.classList.add("show");
+
+      // Hide after 3 seconds
+        setTimeout(() => {
+        popup.classList.remove("show");
+        }, 3000);
     }
 </script>
 </html>
